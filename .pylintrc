@@ -1,6 +1,7 @@
 [MASTER]
 
 disable=
+      C0305, # C0305 Trailing newlines (trailing-newlines)
       C0114, # C0114 (missing-module-docstring)
       C0115, # C0115 (missing-class-docstring)
       C0116, # C0116 (missing-function-docstring)
