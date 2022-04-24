@@ -5,7 +5,7 @@ from .interfaces.html_collector import HtmlCollectorInterface
 class HtmlCollector(HtmlCollectorInterface):
 
     @classmethod
-    def collect_essential_information(cls, html: str) -> List[Dict[str,str]]:
+    def collect_essential_information(cls, html: str) -> List[Dict[str,str]]: # pylint: disable=arguments-differ
         soup = BeautifulSoup(html, 'html.parser')
 
         artist_name_list = soup.find(class_='BodyText')
