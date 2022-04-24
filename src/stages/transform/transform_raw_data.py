@@ -42,7 +42,7 @@ class TransformRawData:
     def __transform_data(cls, names: List, link: str) -> Dict:
         link_splited = link.split('artistid=')
 
-        if len(names) == 2: # pylint: disable=no-else-return
+        if len(names) == 2:
             return {
                 "first_name": names[1],
                 "second_name": names[0],
@@ -50,7 +50,7 @@ class TransformRawData:
                 "artist_id": link_splited[1],
                 "link": link
             }
-        elif len(names) == 3:
+        if len(names) == 3:
             return {
                 "first_name": names[2],
                 "second_name": names[0],
@@ -58,11 +58,10 @@ class TransformRawData:
                 "artist_id": link_splited[1],
                 "link": link
             }
-        else:
-            return {
+        return {
                 "first_name": names[0],
                 "second_name": None,
                 "surname": None,
                 "artist_id": link_splited[1],
                 "link": link
-            }
+                }
