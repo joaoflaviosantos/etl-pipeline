@@ -1,0 +1,1 @@
+pytest -s -v src/drivers/html_collector_test.py src/drivers/http_requester_test.py

@@ -21,3 +21,11 @@ repos:
         language: system
         pass_filenames: false
         stages: [commit]
+  - repo: local
+    hooks:
+      - id: tester
+        name: tester
+        entry: bash -c '. src/tests/tester.sh'
+        language: system
+        pass_filenames: false
+        stages: [commit]

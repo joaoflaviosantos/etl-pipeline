@@ -1,4 +1,4 @@
-from .http_requester import HttpRequester
+from src.drivers.http_requester import HttpRequester
 
 def test_request_from_page(requests_mock):
     url = 'http://web.archive.org/web/20121007172955/https://www.nga.gov/collection/anZ1.htm'

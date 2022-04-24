@@ -1,13 +1,13 @@
-from .html_collector import HtmlCollector
-from .mocks.http_requester_mock import mock_request_from_page
+from src.drivers.html_collector import HtmlCollector
+from src.drivers.mocks.http_requester_mock import mock_request_from_page
 
-def test_collet_essential_information():
+def test_collect_essential_information():
     # Importing mock string and tested class
     http_request_response = mock_request_from_page()
     html_collector = HtmlCollector()
 
     # Object testing intancing
-    essential_information = html_collector.collet_essential_information(http_request_response["html"])
+    essential_information = html_collector.collect_essential_information(http_request_response["html"])
 
     assert isinstance(essential_information, list)
     assert isinstance(essential_information[0], dict)
