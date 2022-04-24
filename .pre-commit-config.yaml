@@ -25,7 +25,7 @@ repos:
     hooks:
       - id: tester
         name: tester
-        entry: bash -c '. src/tests/tester.sh'
+        entry: bash -c 'pytest -s -v src/drivers/html_collector_test.py src/drivers/http_requester_test.py src/stages/extract/extract_html_test.py'
         language: system
         pass_filenames: false
         stages: [commit]
